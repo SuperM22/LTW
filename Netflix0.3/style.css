@@ -129,6 +129,9 @@ ul li label:hover{
     opacity: 1;
     height: auto;
 }
+#chk2:not(:checked) ~ .sub-menu{
+    pointer-events: none;
+}
 
 
 
