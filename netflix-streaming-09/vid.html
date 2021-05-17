@@ -9,6 +9,17 @@
     <link rel="stylesheet" href="./style/stylevid.css">
     <title>Prova video player</title>
     <script type="text/javascript" src="./script/custom.js"></script>
+    <script type="text/javascript">
+        var myCookie = getCookie("netflix");
+        if (myCookie == null) {
+            let sessione = sessionStorage.getItem("netflix");
+            if(sessione == null){
+                window.location = "login.html";
+            }
+
+        }
+    </script>
+    
 
 </head>
 <body>
