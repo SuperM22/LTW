@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>LTWIX - Login</title>
+        <link rel="stylesheet" href="./style/style-login.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script type="text/javascript" src="./script/login.js"></script>
+        <script type="text/javascript">
+            var myCookie = getCookie("netflix");
+            if(myCookie != null){
+                window.location = "index.html";
+            }else{
+                let sessione = sessionStorage.getItem("netflix");
+                if(sessione != null){
+                    window.location = "index.html";
+                }
+            }
+        </script>
+
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="header">
+                <div class="logo"><a href="index.html">LTWIX</a></div>
+
+            </div>
+            <div class="login_body">
+                <div class="login_box">
+                    <h2>Log in</h2>
+                    <form class="" action="" method="post">
+                        <div class="input_wrap">
+                            <input id ="email" type="email" name="email" value="" placeholder="Email">
+                            <span class="sign_error"></span>
+                        </div>
+                        <div class="input_wrap">
+                            <input id ="password" type="password" name="password" value="" placeholder="Password">
+                            <span class="eye" onclick="changeEye()">
+                                <i id="hide1" class="fa fa-eye"></i>
+                                <i id="hide2" class="fa fa-eye-slash"></i>
+                            </span>
+                            <span class="sign_error"></span>
+                        </div>
+                        <div class="input_wrap">
+                            <button id="login" type="button" name="button">Log in</button>
+                        </div>
+                        <div class="support">
+                            <div class="remember">
+                                <span><input id="remember-me" type="checkbox" name="checkbox" value=""></span>
+                                <label for="remember-me">Ricordami</label>
+                            </div>
+                            <div class="need_help">
+                                <a href="forgot_password.html">Password dimenticata?</a>
+                            </div>
+                        </div>
+
+                        <div class="sign_up">
+                            <p>Non hai un account? <a href="sign_up.html">Registrati</a></p>
+                        </div>
+
+
+                    </form>
+                </div>
+            </div>
+
+
+
+        </div>
+    </body>
+</html>
